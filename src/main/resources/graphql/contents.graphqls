@@ -1,0 +1,25 @@
+type Contents {
+    idx: ID!
+    title: String!
+    contents: String!
+    category: String
+   	user: User!
+}
+
+type User {
+    idx: ID!
+    name: String!
+    thumbnail: String
+}
+
+
+type Query {
+    getAllContents: [Contents]
+    getContents(idx: ID!): Contents
+}
+
+# Mutation for the application
+type Mutation {
+    createContents(title: String!, contents: String!, category: String, userIdx: ID!) : Contents
+    updateContentsTitle(idx: ID!, title: String!) : Contents
+}
