@@ -22,4 +22,5 @@ type Query {
 type Mutation {
     createContents(title: String!, contents: String!, category: String, userIdx: ID!) : Contents
     updateContentsTitle(idx: ID!, title: String!) : Contents
+    deleteContents(idx: ID!) : Contents
 }

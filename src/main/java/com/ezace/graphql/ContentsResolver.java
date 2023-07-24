@@ -53,4 +53,16 @@ public class ContentsResolver implements GraphQLQueryResolver, GraphQLMutationRe
 
         return contents;
     }
+    
+    
+    public Contents deleteContents(int idx) {
+        
+    	Contents contents = contentsRepository.findByIdx(idx);
+
+        //update title
+    	contents.setUseyn("N");
+    	contents = contentsRepository.save(contents);
+
+        return contents;
+    }
 }

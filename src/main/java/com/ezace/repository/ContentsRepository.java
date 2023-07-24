@@ -6,4 +6,5 @@ import com.ezace.domain.Contents;
 
 public interface ContentsRepository extends JpaRepository<Contents, Long> {
 	Contents findByIdx(int idx);
+	
 }

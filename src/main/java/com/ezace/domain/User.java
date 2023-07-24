@@ -2,15 +2,19 @@ package com.ezace.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
 @Builder
-@Getter
+@Data
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name = "tb_user_info")
 @Entity
 public class User {
 
